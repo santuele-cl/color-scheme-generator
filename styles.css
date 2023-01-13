@@ -1,0 +1,40 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+    width: min(93%, 1280px);
+    margin: 0 auto;
+}
+
+#color-container {
+    display: flex;
+    gap: .3rem;
+    flex-wrap: wrap;
+}
+
+#color-container > div {
+    flex: 1 150px;
+    display: flex;
+    gap: .3rem;
+    flex-direction: column;
+}
+
+.color-box {
+    height: 240px;
+    border-radius: 5px;
+    outline: 1px solid rgb(144, 95, 3);
+}
+
+.color-name {
+    outline: 1px solid rgb(144, 95, 3);
+    text-align: center;
+    border-radius: 5px;
+    padding: 1rem 0;
+    font-weight: 500;
+}
+
+@media (min-width:767px) {
+    .color-box {
+        height: 620px;
+    }
+}
