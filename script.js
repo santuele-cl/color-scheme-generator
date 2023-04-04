@@ -51,7 +51,7 @@ scanButton.addEventListener("click", async () => {
     try {
       const ndef = new NDEFReader();
       await ndef.scan();
-      parag.innerText += "> Scan started";
+      parag.innerText += "> Scan started" + '\n';
   
       ndef.addEventListener("readingerror", () => {
         console.log("Argh! Cannot read data from the NFC tag. Try another one?");
@@ -60,10 +60,10 @@ scanButton.addEventListener("click", async () => {
   
       ndef.addEventListener("reading", ({ message, serialNumber }) => {
         parag.textContent = message.records;
-        parag.innerText += `> Serial Number: ${serialNumber}`;
+        parag.innerText += `> Serial Number: ${serialNumber}` + '\n';
         console.log(`> Serial Number: ${serialNumber}`);
-        parag.innerText += `> Records: (${message.records.length})`;
-        console.log(`> Records: (${message.records.length})`);
+        parag.innerText += `> Records: (${message.records}) \n`;
+        console.log(`> Records: (${message.records})`);
       });
     } catch (error) {
         console.log("Argh! " + error);
