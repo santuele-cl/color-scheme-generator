@@ -62,7 +62,7 @@ scanButton.addEventListener("click", async () => {
         parag.textContent = message.records;
         parag.innerText += `> Serial Number: ${serialNumber}` + '\n';
         console.log(`> Serial Number: ${serialNumber}`);
-        parag.innerText += `> Records: (${message.records}) \n`;
+        parag.innerText += `> Records: (${JSON.stringify(message.records)}) \n`;
         console.log(`> Records: (${message.records})`);
       });
     } catch (error) {
